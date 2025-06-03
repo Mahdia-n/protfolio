@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative Portfolio | Mahdia Noori</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f9e9db;
+      --text-color: #664141;
+      --accent-color: #845b03;
+      --card-bg: #d2b093fa;
+      --nav-bg: #d2b093fa;
+      --input-bg: #fffaf5;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: var(--nav-bg);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: darkcyan;
+    }
+
+    .section {
+      padding: 3rem 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+      flex: 1;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border: 2px solid var(--accent-color);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .button {
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      font-weight: bold;
+      border: 2px solid var(--accent-color);
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: var(--accent-color);
+      color: #fff;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid var(--accent-color);
+      border-radius: 8px;
+      background-color: var(--input-bg);
+      color: var(--text-color);
+      box-sizing: border-box;
+    }
+
+    form textarea {
+      resize: vertical;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: var(--nav-bg);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Creative Portfolio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#projects">Portfolio</a>
+    </nav>
+  </header>
+
+  <section id="home" class="section">
+    <h2>Hello! I'm Mahdia Noori</h2>
+    <p>Keen Afghan girl passionate about programming and learning.</p>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I’m learning programming because I have a passion to become a software engineer.</p>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">My Movie Theater</a></div>
+      <div class="project-card">My Personal Recipe Book</div>
+      <div class="project-card">Password Generator (Python)</div>
+      <div class="project-card">My Personal Portfolio</div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form action="#" method="post">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button class="button" type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Created with passion — &copy; 2025 Mahdia</p>
+  </footer>
+
+</body>
+</html>
